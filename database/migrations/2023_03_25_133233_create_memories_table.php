@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->enum('type',['general','occasional'])->default('general');
             $table->string('date')->nullable();
+            $table->enum('user_type',['family','friend','mate'])->nullable();
             $table->timestamps();
         });
     }
